@@ -1,0 +1,31 @@
+CREATE (TheMatrix:Movie {title:'The Matrix', released:1999, tagline:'Welcome to the Real World'})
+CREATE (Keanu:Person {name:'Keanu Reeves', born:1964})
+CREATE
+                 (Keanu)-[:ACTED_IN {roles:['Neo']}]->(TheMatrix),
+                 (Carrie)-[:ACTED_IN {roles:['Trinity']}]->(TheMatrix),
+                 (LanaW)-[:DIRECTED]->(TheMatrix),
+                 (JoelS)-[:PRODUCED]->(TheMatrix)
+
+CREATE (TheDevilsAdvocate:Movie {title:"The Devil's Advocate", released:1997, tagline:'Evil has its winning ways'})
+CREATE (Charlize:Person {name:'Charlize Theron', born:1975})
+CREATE (Al:Person {name:'Al Pacino', born:1940})
+CREATE
+                  (Keanu)-[:ACTED_IN {roles:['Kevin Lomax']}]->(TheDevilsAdvocate),
+                  (Charlize)-[:ACTED_IN {roles:['Mary Ann Lomax']}]->(TheDevilsAdvocate),
+                (Al)-[:ACTED_IN {roles:['John Milton']}]->(TheDevilsAdvocate),
+                (Taylor)-[:DIRECTED]->(TheDevilsAdvocate)
+
+CREATE (AFewGoodMen:Movie {title:"A Few Good Men", released:1992, tagline:"In the heart of the nation's capital, in a courthouse of the U.S. government, one man will stop at nothing to keep his honor, and one will stop at nothing to find the truth."})
+CREATE (TomC:Person {name:'Tom Cruise', born:1962})
+CREATE (RobR:Person {name:'Rob Reiner', born:1947})
+CREATE
+                (TomC)-[:ACTED_IN {roles:['Lt. Daniel Kaffee']}]->(AFewGoodMen),
+                (JackN)-[:ACTED_IN {roles:['Col. Nathan R. Jessup']}]->(AFewGoodMen),
+                (DemiM)-[:ACTED_IN {roles:['Lt. Cdr. JoAnne Galloway']}]->(AFewGoodMen),
+                 (JTW)-[:ACTED_IN {roles:['Lt. Col. Matthew Andrew Markinson']}]->(AFewGoodMen),
+                (JamesM)-[:ACTED_IN {roles:['Pfc. Louden Downey']}]->(AFewGoodMen),
+                (ChristopherG)-[:ACTED_IN {roles:['Dr. Stone']}]->(AFewGoodMen),
+                  (AaronS)-[:ACTED_IN {roles:['Man in Bar']}]->(AFewGoodMen),
+                  (RobR)-[:DIRECTED]->(AFewGoodMen),
+                  (AaronS)-[:WROTE]->(AFewGoodMen)
+
